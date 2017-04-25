@@ -1,0 +1,7 @@
+#!/bin/sh -x
+
+curl -f -o $(git rev-parse --git-dir)/hooks/commit-msg       https://raw.githubusercontent.com/RevelSystems/PublicGitHooks/master/commit-msg
+curl -f -o $(git rev-parse --git-dir)/hooks/commit-msg-revel https://raw.githubusercontent.com/RevelSystems/PublicGitHooks/master/commit-msg-revel
+chmod +x $(git rev-parse --git-dir)/hooks/commit-msg
+chmod +x $(git rev-parse --git-dir)/hooks/commit-msg-revel
+

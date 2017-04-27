@@ -5,6 +5,8 @@ test -e $(git rev-parse --git-dir)/hooks/commit-msg && {
     exit 1
 }
 
+mkdir -p $(git rev-parse --git-dir)/hooks
+
 curl -f -o $(git rev-parse --git-dir)/hooks/commit-msg       https://raw.githubusercontent.com/RevelSystems/PublicGitHooks/master/commit-msg
 curl -f -o $(git rev-parse --git-dir)/hooks/commit-msg-revel https://raw.githubusercontent.com/RevelSystems/PublicGitHooks/master/commit-msg-revel
 chmod +x $(git rev-parse --git-dir)/hooks/commit-msg
